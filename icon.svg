@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Shivan Vazikati icon">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#b96a35" />
+      <stop offset="100%" stop-color="#6f3011" />
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="48" fill="url(#bg)" />
+  <path
+    d="M128 40 190 86v24h-12v72h16v18H62v-18h16v-72H66V86l62-46Zm0 23-42 31h84l-42-31Zm-18 47v72h36v-72h-36Zm-10 18H88v54h12v-54Zm68 0h-12v54h12v-54Z"
+    fill="#fff5e6"
+  />
+  <circle cx="128" cy="124" r="10" fill="#f1c36b" />
+</svg>

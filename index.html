@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ta">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>சிவன் வழிகாட்டி</title>
+    <meta
+      name="description"
+      content="சிவன் வழிகாட்டி என்பது 276 பாடல் பெற்ற ஸ்தலங்களை, திருத்தல சுயவிவரங்களை, கூகுள் மேப்ஸ் வழிகாட்டியை, விருப்பப் பட்டியலை, ஆஃப்லைன் பயன்பாட்டை வழங்கும் ஒரு செயலி."
+    />
+    <meta name="theme-color" content="#8d4a1d" />
+    <link rel="manifest" href="./manifest.webmanifest?v=5" />
+    <link rel="stylesheet" href="./styles.css?v=5" />
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <header class="hero">
+      <div class="hero__copy">
+        <div class="topbar">
+          <p class="eyebrow" id="hero-kicker">தேவாரம் திருத்தல வரைபடம்</p>
+          <div class="topbar__actions">
+            <button
+              class="chip chip--small"
+              id="language-toggle"
+              type="button"
+              aria-label="மொழியை மாற்று"
+            >
+              ஆங்கிலம்
+            </button>
+            <button
+              class="chip chip--small"
+              id="install-button"
+              type="button"
+              hidden
+            >
+              செயலியை நிறுவு
+            </button>
+          </div>
+        </div>
+
+        <h1>சிவன் வழிகாட்டி</h1>
+        <p class="hero__lede" id="hero-lede">
+          பாடல் பெற்ற ஸ்தலங்களின் மரபுப் பட்டியலை உலாவி, ஒவ்வொரு
+          திருத்தல சுயவிவரத்தையும் திறந்து, தேவாரத் தொடர்பை அறிந்து,
+          கூகுள் மேப்ஸ் வழிசெலுத்தலைப் பெறுங்கள்.
+        </p>
+
+        <div class="hero__actions">
+          <a class="button button--primary" id="hero-browse" href="#directory">276 திருத்தலங்களை காண்க</a>
+          <a class="button button--ghost" id="hero-profile" href="#profile-panel">தேர்ந்தெடுத்த சுயவிவரம்</a>
+        </div>
+
+        <div class="hero__notice" id="count-note">
+          இந்த செயலி பரவலாகப் பயன்படும் 276 மரபுப் பட்டியலைப் பயன்படுத்துகிறது.
+          சில பழைய ஆதாரங்கள் 274 தனித்த திருத்தலங்கள் என்றும் கூறுகின்றன.
+        </div>
+      </div>
+
+      <aside class="hero__panel">
+        <div class="stat">
+          <span class="stat__value" id="temple-count">276</span>
+          <span class="stat__label" id="canonical-label">மரபுப் பதிவுகள்</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value" id="region-count">10</span>
+          <span class="stat__label" id="regions-label">பாரம்பரிய பகுதிகள்</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value" id="favorites-count">0</span>
+          <span class="stat__label" id="favorites-label">சேமித்த விருப்பங்கள்</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value" id="offline-status">தயார்</span>
+          <span class="stat__label" id="offline-label">ஆஃப்லைன் பட்டியல் நினைவகம்</span>
+        </div>
+      </aside>
+    </header>
+
+    <main class="layout">
+      <section class="panel" id="runtime-warning" hidden>
+        <div class="panel__heading">
+          <div>
+            <p class="section-kicker">இயக்க நிலை</p>
+            <h2 id="runtime-title">உலாவியில் உள்ளூர் சர்வர் மூலம் திறக்கவும்</h2>
+          </div>
+        </div>
+        <p id="runtime-copy">
+          VS Code preview அல்லது file:// முறையில் திறந்தால் JavaScript, மொழி
+          மாற்றம், கோவில் படங்கள் போன்ற அம்சங்கள் தடுக்கப்படலாம். Live Server
+          அல்லது உள்ளூர் சர்வர் மூலம் Chrome அல்லது Edge உலாவியில் திறக்கவும்.
+        </p>
+      </section>
+
+      <section class="panel panel--wide">
+        <div class="panel__heading">
+          <div>
+            <p class="section-kicker" id="thevaram-kicker">தேவாரம்</p>
+            <h2 id="thevaram-title">இந்தத் திருத்தலங்கள் ஏன் முக்கியம்</h2>
+          </div>
+        </div>
+        <div class="info-grid">
+          <article class="info-card">
+            <h3 id="info-thevaram-title">தேவாரத் தொடர்பு</h3>
+            <p id="thevaram-copy">
+              பாடல் பெற்ற ஸ்தலங்கள் என்பது சம்பந்தர், அப்பர், சுந்தரர் ஆகியோர்
+              பாடிய தேவாரப் பதிகங்களில் போற்றப்பட்ட சிவத்தலங்கள் ஆகும். இவை
+              திரुमுறையின் மையப் புனிதத் திருத்தலங்களாக மதிக்கப்படுகின்றன.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3 id="info-count-title">மரபுப் பட்டியல் குறிப்பு</h3>
+            <p id="info-count-copy">
+              இப்போது பயன்படும் பல பட்டியல்கள் 276 மரபுப் பதிவுகள் என்று
+              குறிப்பிடுகின்றன. சில பழைய ஆதாரங்கள் 274 தனித்த திருத்தலங்கள்
+              என்றும் சொல்கின்றன. இந்த செயலி 276 மரபுப் பட்டியலைத் தெளிவாகக்
+              காட்டுகிறது.
+            </p>
+          </article>
+          <article class="info-card">
+            <h3 id="info-offline-title">ஆஃப்லைனிலும் பயன்படும்</h3>
+            <p id="info-offline-copy">
+              பட்டியல், திருத்தல சுயவிவரம், விருப்பங்கள், யாத்திரை திட்டம்,
+              உங்கள் பயண குறிப்புகள் ஆகியவை சேமிக்கப்படுவதால் இணையம் குறைந்தாலும்
+              இந்த செயலியை பயன்படுத்தலாம்.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <div class="workspace__main">
+          <section class="panel" id="directory">
+            <div class="panel__heading">
+              <div>
+                <p class="section-kicker" id="directory-kicker">திருத்தலப் பட்டியல்</p>
+                <h2 id="directory-title">திருத்தலம், மூலவர், பகுதி, நாயன்மார் மூலம் தேடுங்கள்</h2>
+              </div>
+              <p class="panel__hint" id="results-summary">
+                முழுப் பட்டியலும் காண்பிக்கப்படுகிறது.
+              </p>
+            </div>
+
+            <div class="controls">
+              <label class="search">
+                <span class="search__label" id="search-label">தேடல்</span>
+                <input
+                  id="search-input"
+                  type="search"
+                  placeholder="திருத்தலம், மூலவர், ஊர், தேவாரம், பகுதி மூலம் தேடுங்கள்"
+                  autocomplete="off"
+                />
+              </label>
+
+              <div class="filter-grid">
+                <label class="select-field">
+                  <span class="search__label" id="region-label">பகுதி</span>
+                  <select id="region-select"></select>
+                </label>
+
+                <label class="select-field">
+                  <span class="search__label" id="saint-label">நாயன்மார்</span>
+                  <select id="nayanmar-select"></select>
+                </label>
+
+                <label class="select-field">
+                  <span class="search__label" id="view-label">பார்வை</span>
+                  <select id="view-select"></select>
+                </label>
+              </div>
+
+              <div class="chips chips--atlas" id="region-chips"></div>
+            </div>
+
+            <div class="atlas">
+              <div class="atlas__map" id="region-atlas" aria-label="திருத்தல வரைபடம்"></div>
+              <div class="atlas__legend">
+                <h3 id="atlas-title">பகுதி வரைபடம்</h3>
+                <p id="atlas-copy">
+                  வண்ணக் குறியீட்டுப் பகுதியைத் தேர்வு செய்து திருத்தலங்களை
+                  வடிகட்டுங்கள். பிறகு ஒரு திருத்தலத்தைத் திறந்து கூகுள் மேப்ஸில்
+                  இடத்தையும் அருகிலுள்ள பாடல் பெற்ற தலங்களையும் காணலாம்.
+                </p>
+                <div class="atlas__counts" id="region-counts"></div>
+              </div>
+            </div>
+
+            <div class="directory-grid" id="temple-grid"></div>
+          </section>
+        </div>
+
+        <aside class="workspace__side">
+          <section class="panel panel--sticky" id="profile-panel">
+            <div class="panel__heading">
+              <div>
+                <p class="section-kicker" id="profile-kicker">திருத்தல சுயவிவரம்</p>
+                <h2 id="profile-title">ஒரு திருத்தலத்தைத் தேர்ந்தெடுக்கவும்</h2>
+              </div>
+            </div>
+
+            <div class="profile" id="profile-content">
+              <p class="empty-state" id="profile-empty">
+                ஏதேனும் ஒரு திருத்தல அட்டையைத் திறந்து அதன் சுயவிவரம்,
+                வரைபடம், அருகிலுள்ள தலங்கள், திட்ட அம்சங்களைப் பார்க்கலாம்.
+              </p>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel__heading">
+              <div>
+                <p class="section-kicker" id="planner-kicker">யாத்திரை திட்டம்</p>
+                <h2 id="planner-title">உங்கள் சேமித்த சுற்றுப்பாதை</h2>
+              </div>
+            </div>
+            <div id="planner-list">
+              <p class="empty-state">
+                ஒரு திருத்தலத்தைத் தேர்வு செய்து உங்கள் யாத்திரை திட்டத்தை
+                அமைக்கவும்.
+              </p>
+            </div>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p id="footer-copy">
+        சிவன் வழிகாட்டி 276 மரபுப் பட்டியலை அடிப்படையாகக் கொண்டு,
+        திருத்தல ஆதார இணைப்புகள், கூகுள் மேப்ஸ், உள்ளூர் யாத்திரை திட்ட
+        உதவிகளை இணைக்கிறது.
+      </p>
+    </footer>
+
+    <script src="./catalog.js?v=5"></script>
+    <script src="./profiles.js?v=5"></script>
+    <script src="./app.js?v=5"></script>
+  </body>
+</html>

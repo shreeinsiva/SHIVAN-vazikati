@@ -1,0 +1,17 @@
+{
+  "name": "Shivan Vazikati",
+  "short_name": "Vazikati",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4ead7",
+  "theme_color": "#8d4a1d",
+  "description": "Paadal Petra Sthalam atlas with temple profiles, Google Maps guidance, favorites, planner, and offline support.",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
